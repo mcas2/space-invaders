@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://ipo0tm022hfq"]
+
+[ext_resource type="Texture2D" uid="uid://d254s1yy0womn" path="res://fondo.jpg" id="1_hkl68"]
+[ext_resource type="Script" path="res://fondo.gd" id="1_n2pgt"]
+[ext_resource type="PackedScene" uid="uid://ckchtl41x0hjv" path="res://jugador.tscn" id="2_cjamp"]
+[ext_resource type="PackedScene" uid="uid://ditb4vlwdf61p" path="res://marciano.tscn" id="3_qctbj"]
+[ext_resource type="PackedScene" uid="uid://bwh7pfyk0upq8" path="res://bala.tscn" id="5_kl1lm"]
+
+[node name="escenaMain" type="Node2D"]
+physics_interpolation_mode = 2
+script = ExtResource("1_n2pgt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_hkl68")
+
+[node name="jugador" parent="." instance=ExtResource("2_cjamp")]
+position = Vector2(90, 586)
+Speed = null
+
+[node name="marciano" parent="." instance=ExtResource("3_qctbj")]
+position = Vector2(108, 88)
+
+[node name="Bala" parent="." instance=ExtResource("5_kl1lm")]
+position = Vector2(-33, 218)

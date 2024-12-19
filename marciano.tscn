@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ditb4vlwdf61p"]
+
+[ext_resource type="Script" path="res://marciano.gd" id="1_311iw"]
+[ext_resource type="Texture2D" uid="uid://h2mg58lnngrf" path="res://marciano.png" id="1_j70ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfsjx"]
+size = Vector2(70, 70)
+
+[node name="Marciano" type="CharacterBody2D"]
+script = ExtResource("1_311iw")
+
+[node name="spriteMarciano" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 4.76837e-06)
+scale = Vector2(0.0683594, 0.0683594)
+texture = ExtResource("1_j70ai")
+
+[node name="areaMarciano" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_bfsjx")
